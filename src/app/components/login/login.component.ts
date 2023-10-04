@@ -1,6 +1,17 @@
 import { Component,Renderer2 } from '@angular/core';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import {faGooglePlusG} from '@fortawesome/free-brands-svg-icons'
+import { User } from 'src/app/interfaces/user.interface';
+
+let user: User = {
+  id: 0,
+  fullName: '',
+  emailVerified:0,
+  userProviderId: '',
+  login:'',
+  password:'',
+  providerIdRegister:0
+};
 
 @Component({
   selector: 'app-login',
@@ -29,8 +40,16 @@ export class LoginComponent {
     this.renderer.addClass(element,"container")
   }
 
-  signInWithGoogle() {
-  this.authService.signInWithGoogle()
+  async signInWithGoogle() {
+    user = await this.authService.signInWithGoogle();
+    
+    if(user == null){
+      alert('usuario vacio')
+    }
+    else{
+      console.log(JSON.stringify(user))
+    }
+    
   }
 }
 

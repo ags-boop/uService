@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { PageToRedirect } from 'C:/uService/uService/src/app/enums/page-to-redirect.enum';
+import { PageToRedirect } from '../../enums/page-to-redirect.enum';
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
