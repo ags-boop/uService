@@ -1,5 +1,5 @@
 export const environment = {
-    production:true,
+    production:false,
     firebase : {
         apiKey: "AIzaSyAIA9WQzTd5wjANYtQjfoQqzw-IQUyEluA",
         authDomain: "uservice-38d70.firebaseapp.com",
@@ -8,5 +8,8 @@ export const environment = {
         messagingSenderId: "80353421039",
         appId: "1:80353421039:web:aafdd54ad6b13ae0fa9d1a",
         measurementId: "G-66Y7BVDVD7"
-    }
+    },
+    URLApi:"https://localhost:4201/",
+    URLApiTest:"https://localhost:4201/",
+    passwordToken:'GENERALADMINISTRATOR'
 };
